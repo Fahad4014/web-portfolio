@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Atelier Nord</title>
+<meta name="description" content="Start a project with Atelier Nord. Tell us about your site, your budget and your timeline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site-head">
+    <a class="logo" href="index.html"><i></i>Atelier Nord</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="studio.html">Studio</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <h1 class="rise">Start a project</h1>
+    <p class="rise d2">Tell us a little about your site and what you hope to build. We reply to every enquiry within two working days.</p>
+  </section>
+
+  <section class="sec split">
+    <div class="offices">
+      <div><span class="mono">Studio</span><b>Guldbergsgade 29, 2200 Copenhagen N</b><span>Mon–Fri, 9:00–17:30</span></div>
+      <div><span class="mono">New projects</span><b>studio@ateliernord.example</b><span>Ida Holm, founding partner</span></div>
+      <div><span class="mono">Press</span><b>press@ateliernord.example</b><span>Images and drawings on request</span></div>
+    </div>
+
+    <form class="form" id="enquiry" novalidate>
+      <label>Name<input id="name" name="name" required autocomplete="name"></label>
+      <label>Email<input id="email" name="email" type="email" required autocomplete="email"></label>
+      <div class="full" style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:14px;font-weight:600">Project type</span>
+        <div class="chips">
+          <label><input type="radio" name="type" value="New home" checked><span>New home</span></label>
+          <label><input type="radio" name="type" value="Renovation"><span>Renovation</span></label>
+          <label><input type="radio" name="type" value="Interior"><span>Interior</span></label>
+          <label><input type="radio" name="type" value="Housing or public"><span>Housing or public</span></label>
+        </div>
+      </div>
+      <label>Location of site<input id="loc" name="location"></label>
+      <label>Budget (DKK)
+        <select id="budget" name="budget">
+          <option>Under 2 million</option><option>2–5 million</option><option>5–15 million</option><option>Over 15 million</option>
+        </select>
+      </label>
+      <label class="full">About the project<textarea id="msg" name="message" placeholder="The site, who will use it, and your timeline"></textarea></label>
+      <div class="full"><button class="btn" type="submit">Send enquiry</button></div>
+      <p class="full sent" id="sent" hidden>Thank you. Your enquiry has been received and Ida will reply within two working days. (Concept site: no message was actually sent.)</p>
+    </form>
+  </section>
+
+  <footer class="site-foot" style="margin-top:96px">
+    <div><a class="logo" href="index.html"><i></i>Atelier Nord</a><p style="margin-top:12px">Architecture and interiors since 2011.</p></div>
+    <div><b>Studio</b>Guldbergsgade 29<br>2200 Copenhagen N</div>
+    <div><b>Contact</b>studio@ateliernord.example<br>+45 00 00 00 00</div>
+    <div><b>Follow</b>Instagram<br>LinkedIn</div>
+  </footer>
+  <p class="concept">Concept design for portfolio purposes · Atelier Nord is a fictional studio</p>
+</div>
+<script>
+document.getElementById('enquiry').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('name'), email = document.getElementById('email');
+  if (!name.value.trim() || !email.value || !email.validity.valid) {
+    (name.value.trim() ? email : name).focus();
+    return;
+  }
+  document.getElementById('sent').hidden = false;
+});
+</script>
+</body>
+</html>

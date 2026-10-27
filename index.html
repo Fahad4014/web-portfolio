@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fahad — Website Design & Development Portfolio</title>
+<meta name="description" content="Concept websites designed and built by Fahad: a custom static HTML site, a salon booking site, and a local SEO site for a plumbing and HVAC company.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#F4F4F2;--ink:#161616;--muted:#62625E;--line:#D8D8D3;--card:#fff;--accent:#1F5BFF}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--ink:#EDEDEA;--muted:#9C9C96;--line:#2C2C2A;--card:#1B1B1A;--accent:#7FA2FF}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Schibsted Grotesk",system-ui,sans-serif;padding:clamp(32px,6vw,80px) max(16px,4vw)}
+main{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:48px}
+h1{font-size:clamp(40px,6vw,72px);line-height:1;margin:0;font-weight:800;letter-spacing:-.03em;text-wrap:balance}
+.lede{color:var(--muted);max-width:60ch;margin:16px 0 0;font-size:19px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+a.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+a.card:hover{transform:translateY(-3px);border-color:var(--accent)}
+a.card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.card div{padding:18px 20px 22px;display:flex;flex-direction:column;gap:6px}
+.card h2{margin:0;font-size:22px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tags span{font-size:12px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--muted)}
+.go{color:var(--accent);font-weight:600;font-size:15px;margin-top:8px}
+footer{color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:20px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Websites designed and built by Fahad</h1>
+    <p class="lede">Three concept projects showing the kinds of sites I build for clients: custom-designed static pages, a booking site with accounts and maps, and a local SEO site for a service business.</p>
+  </header>
+  <div class="grid">
+    <a class="card" href="atelier-nord/">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=75&auto=format&fit=crop" alt="Atelier Nord homepage hero image of a timber house at dusk">
+      <div><h2>Atelier Nord</h2><p>A 4-page static HTML site for an architecture studio. Custom design system, no template.</p>
+      <div class="tags"><span>HTML5</span><span>CSS</span><span>Responsive</span><span>4 pages</span></div><span class="go">View site →</span></div>
+    </a>
+    <a class="card" href="rosewell-salons/">
+      <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=900&q=75&auto=format&fit=crop" alt="Rosewell salon stylist blow-drying a client's hair">
+      <div><h2>Rosewell Salons</h2><p>A salon booking site: find the nearest salon on a map, pick a stylist and time, create an account, pay after the visit.</p>
+      <div class="tags"><span>Booking flow</span><span>Maps</span><span>Accounts</span><span>JavaScript</span></div><span class="go">View site →</span></div>
+    </a>
+    <a class="card" href="copperline/">
+      <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=900&q=75&auto=format&fit=crop" alt="Copper water pipes and valves on a brick wall">
+      <div><h2>Copperline Plumbing & Air</h2><p>A local SEO site for a plumbing and HVAC company, with service pages, city pages and local business schema.</p>
+      <div class="tags"><span>Local SEO</span><span>Schema</span><span>Lead forms</span><span>Click-to-call</span></div><span class="go">View site →</span></div>
+    </a>
+  </div>
+  <footer>All three are concept designs for fictional businesses, built to show design and development work. Photos from Unsplash.</footer>
+</main>
+</body>
+</html>
